@@ -1,19 +1,19 @@
-plugins {
-    id 'java'
-}
+subprojects {
+    apply plugin: 'java'
 
-group = 'com.nwboxed'
-version = '1.0-SNAPSHOT'
+    group = 'com.nwboxed'
+    version = '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
+    repositories {
+        mavenCentral()
+    }
 
-dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
+    dependencies {
+        testImplementation platform('org.junit:junit-bom:5.10.0')
+        testImplementation 'org.junit.jupiter:junit-jupiter'
+    }
 
-test {
-    useJUnitPlatform()
+    test {
+        useJUnitPlatform()
+    }
 }
