@@ -1,4 +1,4 @@
-package bank.db;
+package bank.adapter.outbound;
 
 import io.micronaut.context.event.ApplicationEventListener;
 import io.micronaut.context.event.StartupEvent;
@@ -23,8 +23,8 @@ public class DbSchemaGenerator implements ApplicationEventListener<StartupEvent>
             try (Statement statement = connection.createStatement()) {
                 statement.execute(
                         """
-                                CREATE TABLE IF NOT EXISTS messages (
-                                    content VARCHAR NOT NULL,
+                                CREATE TABLE IF NOT EXISTS movements (
+                                    amount VARCHAR NOT NULL,
                                     timestamp TIMESTAMP NOT NULL
                                 )
                              """
