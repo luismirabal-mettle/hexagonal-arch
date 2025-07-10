@@ -1,0 +1,12 @@
+micronaut:
+  application:
+    name: shopping-basket-http
+  server:
+    port: 8082
+
+datasources:
+  default:
+    url: jdbc:h2:mem:devDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
