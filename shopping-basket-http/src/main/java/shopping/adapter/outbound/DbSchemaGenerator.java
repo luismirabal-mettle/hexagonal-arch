@@ -1,4 +1,4 @@
-package shopping.db;
+package shopping.adapter.outbound;
 
 import io.micronaut.context.event.ApplicationEventListener;
 import io.micronaut.context.event.StartupEvent;
@@ -23,8 +23,10 @@ public class DbSchemaGenerator implements ApplicationEventListener<StartupEvent>
             try (Statement statement = connection.createStatement()) {
                 statement.execute(
                         """
-                                CREATE TABLE IF NOT EXISTS messages (
-                                    content VARCHAR NOT NULL,
+                                CREATE TABLE IF NOT EXISTS shopping_basket (
+                                    name VARCHAR NOT NULL,
+                                    quantity INTEGER NOT NULL,
+                                    unit_price INTEGER NOT NULL,
                                     timestamp TIMESTAMP NOT NULL
                                 )
                              """
