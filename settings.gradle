@@ -1,3 +1,5 @@
 rootProject.name = 'hexagonal-arch'
 
 include 'shopping-basket-http'
+include 'bank-account-console'
+include 'bank-account-http'
